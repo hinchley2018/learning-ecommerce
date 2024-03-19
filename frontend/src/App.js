@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
         <div className='rounded-lg bg-teal-800 shadow-md'>
           Learning Ecommerce! This div is styled by tailwindcss
         </div>
-        <img src={logo} className='App-logo' alt='logo' />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
