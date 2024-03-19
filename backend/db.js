@@ -32,11 +32,6 @@ async function seedDB() {
             const productPrice = productsPricesList[randomIntFromInterval(0, 19)];
             const productQuantity = productsQuantitiesList[randomIntFromInterval(0, 19)];
 
-            // console.log("productName:", productName);
-            // console.log("productDescription:", productDescription);
-            // console.log("productPrice:", productPrice);
-            // console.log("productQuantity:", productQuantity);
-
             let product = {
                 productName,
                 productDescription,
