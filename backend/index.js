@@ -1,6 +1,6 @@
 // Import the Express module
 import express from 'express';
-import { products } from './constants';
+import { products } from './constants.js';
 
 // Create an Express application
 const app = express();
