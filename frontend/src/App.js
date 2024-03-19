@@ -2,10 +2,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //importing pages
-import Login from "./pages/login.js";
+import Product from "./pages/products.js";
+import Cart from "./pages/cart.js";
 import Home from "./pages/home.js";
-import Checkout from "./pages/checkout.js";
+
 //
+
 import "./App.css";
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/products" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
           <Route index element={<Home />} />
         </Routes>
       </BrowserRouter>

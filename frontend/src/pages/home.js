@@ -13,13 +13,13 @@ export default function Home() {
           onClick={() => navigate("/login")}
           className="bg-purple-300 text-green-600 p-4"
         >
-          Login
+          Our Products
         </button>
         <button
           onClick={() => navigate("/checkout")}
           className="bg-purple-300 text-green-600 p-4"
         >
-          Checkout
+          Go to Cart
         </button>
       </div>
     </div>
