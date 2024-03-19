@@ -10,14 +10,14 @@ export default function Home() {
       </div>
       <div className="grid-rows-2 gap-x-4">
         <button
-          onClick={() => navigate("/login")}
-          className="bg-purple-300 text-green-600 p-4"
+          onClick={() => navigate("/products")}
+          className="bg-purple-600 text-black font-bold p-4"
         >
           Our Products
         </button>
         <button
-          onClick={() => navigate("/checkout")}
-          className="bg-purple-300 text-green-600 p-4"
+          onClick={() => navigate("/cart")}
+          className="bg-purple-600 text-black font-bold p-4"
         >
           Go to Cart
         </button>
