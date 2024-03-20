@@ -1,10 +1,10 @@
 //navigate with buttons
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div data-testid="home">
       <div className=" bg-gradient-to-r from-blue-800 via-blue-500 to-blue-800 p-5 text-center text-4xl">
         Home page
       </div>

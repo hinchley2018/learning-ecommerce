@@ -1,3 +1,3 @@
 export default function Product() {
-  return <div>Checkout our products :D</div>;
+  return <div data-testid="products">Checkout our products :D</div>;
 }

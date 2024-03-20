@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div data-testid="app">
       <BrowserRouter>
         <Routes>
           <Route path="/products" element={<Product />} />
