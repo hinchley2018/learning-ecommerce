@@ -1,24 +1,25 @@
-import logo from "./logo.svg";
+//routing
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//importing pages
+import Product from "./pages/products.js";
+import Cart from "./pages/cart.js";
+import Home from "./pages/home.js";
+
+//
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="rounded-lg shadow-md bg-teal-800">Learning Ecommerce! This div is styled by tailwindcss</div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-testid="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/products" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route index element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
