@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "prod": "node index.js",
+    "dev": "nodemon",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\""
   },
   "author": "",
