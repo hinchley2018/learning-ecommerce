@@ -1,3 +1,5 @@
+//grab config from .env or env vars
+require('dotenv').config();
 // Import the Express module
 const express = require('express');
 
@@ -78,7 +80,6 @@ app.get('/products', (req, res) => {
 })
 
 // Start the server
-const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
