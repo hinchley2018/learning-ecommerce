@@ -22,7 +22,7 @@ export default function Product() {
         </button>
       </div>
       <br></br>
-      <div class="p-6 bg-white rounded-b-xl">
+      <div class="p-6 bg-white rounded-b-xl" data-testid='products'>
         {products.map(product =>(
           <div key={product.id}>
             <p>Product #: {product.id}</p>

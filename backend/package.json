@@ -1,16 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "prod": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\"",
+    "prettier": "npx prettier --write --ignore-path .prettierignore '**/**/*.js'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.18.3"
   },
   "devDependencies": {
