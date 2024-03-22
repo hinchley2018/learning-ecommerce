@@ -1,12 +1,14 @@
 import { mongoose } from "mongoose";
-
-const connectionString = process.env.ATLAS_URI || "mongodb://localhost:27017/";
+import { config } from "dotenv"
+config();
+const connectionString = process.env.DB_URI;
 
 async function connectToDatabase()  {
   try {
     await mongoose.connect(connectionString)
   } catch (error) {
     console.error(error)
+    throw new Error("Failed to connect to mongodb")
   }
 }
 

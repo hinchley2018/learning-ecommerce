@@ -10,8 +10,4 @@ const productSchema = new Schema({
 
 const Product = model("Product", productSchema);
 
-const getAllProducts = async () => {
-  return await Product.find();
-}
-
-export { getAllProducts }
+export { Product }

@@ -2,13 +2,13 @@
 import { config } from "dotenv"
 config();
 
-// Import the Express module
+// Import dependencies
 import express from 'express';
-import { connectToDatabase } from "./connection.js";
-import { getAllProducts } from "./database/schema/Product.js";
-
+import { connectToDatabase } from "./db-connection.js";
+import productRoutes from "./routes/productRoutes.js"
 // Create an Express application
 const app = express();
+
 await connectToDatabase();
 
 // Define a route
@@ -17,10 +17,7 @@ app.get('/', (req, res) => {
 });
 
 // Define products route
-app.get('/products', async (req, res) => {
-  const products = await getAllProducts();
-  res.send(products);
-});
+app.use('/products', productRoutes);
 
 // Start the server
 app.listen(process.env.PORT, () => {
