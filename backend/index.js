@@ -1,11 +1,15 @@
 //grab config from .env or env vars
-require('dotenv').config();
+import { config } from "dotenv"
+config();
+
 // Import the Express module
 import express from 'express';
-import { products } from './constants.js';
+import { connectToDatabase } from "./connection.js";
+import { getAllProducts } from "./database/schema/Product.js";
 
 // Create an Express application
 const app = express();
+await connectToDatabase();
 
 // Define a route
 app.get('/', (req, res) => {
@@ -13,7 +17,8 @@ app.get('/', (req, res) => {
 });
 
 // Define products route
-app.get('/products', (req, res) => {
+app.get('/products', async (req, res) => {
+  const products = await getAllProducts();
   res.send(products);
 });
 
@@ -23,3 +28,4 @@ app.listen(process.env.PORT, () => {
     `Server is running on http://localhost:${process.env.PORT}`
   );
 });
+
