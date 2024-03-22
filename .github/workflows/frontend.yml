@@ -15,6 +15,11 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Run unit tests
+        working-directory: ./frontend 
+        run: |
+          npm install
+          npm run test --if-present
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
