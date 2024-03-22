@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\"",
-    "prettier": "npx prettier --write --ignore-path .prettierignore **/*.{js}"
+    "prettier": "npx prettier --write --ignore-path .prettierignore '**/**/*.js'"
   },
   "author": "",
   "license": "ISC",
