@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
-
-export default function Product() {
+import { Product } from '../../components/Product';
+export default function ProductsPage() {
   const navigate = useNavigate();
   const products = [
     {
@@ -13,29 +13,16 @@ export default function Product() {
   ];
 
   return (
-    <div data-testid='products'>
+    <div data-testid='products-page'>
       <div className=' bg-gradient-to-r from-blue-800 via-blue-500 to-blue-800 p-5 text-center text-4xl'>
         <button onClick={() => navigate('/')} className='blue-500'>
           Home page
         </button>
       </div>
       <br></br>
-      <div class='p-6 bg-white rounded-b-xl' data-testid='products'>
+      <div className='p-6 bg-white rounded-b-xl' data-testid='products'>
         {products.map((product) => (
-          <div key={product.id}>
-            <p>Product #: {product.id}</p>
-            <img
-              src={product.imageUrl}
-              alt={product.description}
-              style={{
-                maxWidth: '100%',
-                maxHeight: '150px',
-                borderRadius: '10px',
-              }}
-            />
-            <p>{product.description}</p>
-            <p>Price: ${product.price.toFixed(2)}</p>
-          </div>
+          <Product key={product.id} product={product}/>
         ))}
       </div>
     </div>
