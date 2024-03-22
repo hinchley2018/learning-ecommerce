@@ -8,12 +8,15 @@
 ## Getting Started
 - install node 20 LTS
 - clone project
+- install mongodb
+
 - have two terminals open to project root 
 
 ### Backend
+- rename `.env.example` to `.env`
 - `cd backend`
 - `npm install`
-- `npm start`
+- `npm run dev`
 
 ### Frontend
 - `cd frontend`
