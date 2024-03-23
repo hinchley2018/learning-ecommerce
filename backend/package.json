@@ -5,10 +5,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+
     "dev": "nodemon",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\"",
-    "prettier": "npx prettier --write --ignore-path .prettierignore '**/**/*.js'"
+    "prettier": "npx prettier --write --ignore-path .prettierignore '**/**/*.js'",
+    "seed-db": "node db.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +22,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  },
+  "type": "module"
 }
