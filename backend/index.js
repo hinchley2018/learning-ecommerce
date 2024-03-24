@@ -1,7 +1,7 @@
 //grab config from .env or env vars
 import { config } from "dotenv"
 config();
-
+import cors from 'cors';
 // Import dependencies
 import express from 'express';
 import { connectToDatabase } from "./db-connection.js";
@@ -10,6 +10,7 @@ import productRoutes from "./routes/productRoutes.js"
 const app = express();
 
 await connectToDatabase();
+app.use(cors());
 
 // Define a route
 app.get('/', (req, res) => {

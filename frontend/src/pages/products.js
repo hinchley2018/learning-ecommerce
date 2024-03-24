@@ -1,16 +1,35 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+// import {useDispatch} from 'react-redux';
+// import { getallProducts } from '../action';
+import axios from 'axios';
+import { createClient } from 'pexels';
 
 export default function Product() {
   const navigate = useNavigate();
-  const products = [
-    {
-      id: 1,
-      imageUrl:
-        'https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      description: 'A cup fit for a software engineer.',
-      price: 4.99,
-    },
-  ];
+  // const disatch = useDispatch();
+
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    // dispatch(getallProducts());
+    axios
+      .get('http://localhost:3001/products')
+      .then((res) => setList(res.data));
+  }, []);
+
+  let val = list.map((item) => {
+    return (
+      <ul>
+        <li key={item.id}>
+          <p>Product # :{item.id}</p>
+          <p>{item.description}</p>
+          <p>{item.price}</p>
+          <p>{item.quantity}</p>
+        </li>
+      </ul>
+    );
+  });
 
   return (
     <div data-testid='products'>
@@ -21,22 +40,7 @@ export default function Product() {
       </div>
       <br></br>
       <div class='p-6 bg-white rounded-b-xl' data-testid='products'>
-        {products.map((product) => (
-          <div key={product.id}>
-            <p>Product #: {product.id}</p>
-            <img
-              src={product.imageUrl}
-              alt={product.description}
-              style={{
-                maxWidth: '100%',
-                maxHeight: '150px',
-                borderRadius: '10px',
-              }}
-            />
-            <p>{product.description}</p>
-            <p>Price: ${product.price.toFixed(2)}</p>
-          </div>
-        ))}
+        {val}
       </div>
     </div>
   );

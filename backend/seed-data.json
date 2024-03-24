@@ -1,59 +1,69 @@
 [
-    {
+    {   
+        "id":3123792,
         "name": "Organic Matcha Green Tea Powder",
         "description": "Premium quality green tea powder, rich in antioxidants and ideal for making matcha lattes and smoothies.",
         "price": 24.99,
         "quantity": 50
     },
     {
+        "id":4380056,
         "name": "Bluetooth Wireless Earbuds",
         "description": "Sleek and comfortable earbuds with high-fidelity sound and noise-cancelling technology for an immersive listening experience.",
         "price": 49.99,
         "quantity": 100
     },
     {
+        "id":3296281,
         "name": "Professional Chef's Knife",
         "description": "Handcrafted, razor-sharp knife made from high-carbon stainless steel, perfect for precision cutting and chopping.",
         "price": 79.99,
         "quantity": 30
     },
     {
+        "id":4519473,
         "name": "Eco-Friendly Reusable Water Bottle",
         "description": "BPA-free, leak-proof water bottle with a stylish design, perfect for staying hydrated on the go.",
         "price": 19.99,
         "quantity": 80
     },
     {
+        "id":5854427,
         "name": "Luxury Scented Candle Gift Set",
         "description": "Set of 3 premium soy wax candles with natural essential oils, each offering a unique and relaxing fragrance.",
         "price": 34.99,
         "quantity": 60
     },
     {
+        "id":7876185,
         "name": "Smart Home Security Camera",
         "description": "Wireless, HD security camera with motion detection and night vision, ideal for monitoring your home or office.",
         "price": 89.99,
         "quantity": 25
     },
     {
+        "id":7675425,
         "name": "Professional Makeup Brush Set",
         "description": "High-quality set of 10 makeup brushes made from synthetic fibers, designed for flawless makeup application.",
         "price": 29.99,
         "quantity": 70
     },
     {
+        "id":6036281,
         "name": "Stainless Steel French Press Coffee Maker",
         "description": "Elegant and durable coffee maker with a double-wall construction for heat retention, perfect for brewing rich and flavorful coffee.",
         "price": 39.99,
         "quantity": 40
     },
     {
+        "id":3779780,
         "name": "Portable Bluetooth Speaker",
         "description": "Compact and powerful speaker with crystal-clear sound and long battery life, perfect for outdoor adventures and parties.",
         "price": 59.99,
         "quantity": 55
     },
     {
+        "id":4005567,
         "name": "Digital Air Fryer",
         "description": "Large-capacity air fryer with digital touchscreen controls, perfect for frying, baking, grilling, and roasting with little to no oil.",
         "price": 119.99,
