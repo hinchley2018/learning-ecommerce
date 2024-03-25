@@ -26,7 +26,7 @@ export function Product({ product }) {
         Price: ${product.price.toFixed(2)}
         <br></br>
       </b>
-      <b>Stock: </b>
+      <b>Order quantity: </b>
       <input
         style={{ width: '40px' }}
         type='number'
