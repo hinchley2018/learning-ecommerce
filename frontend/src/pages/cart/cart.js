@@ -5,5 +5,5 @@ export default function Cart() {
         This is your cart!
       </div>
     </div>
-);
+  );
 }
