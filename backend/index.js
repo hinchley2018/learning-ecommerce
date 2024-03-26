@@ -16,10 +16,11 @@ const app = express();
 await connectToDatabase();
 
 // Define routes
-// Define Swagger Documentation route
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Define products route
 app.use('/products', productRoutes);
+// Define Swagger Documentation route
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Start the server
 app.listen(process.env.PORT, () => {
