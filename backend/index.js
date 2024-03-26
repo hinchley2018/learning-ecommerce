@@ -1,11 +1,11 @@
 //grab config from .env or env vars
-import { config } from "dotenv"
+import { config } from "dotenv";
 config();
 
 // Import dependencies
 import express from 'express';
 import { connectToDatabase } from "./db-connection.js";
-import productRoutes from "./routes/productRoutes.js"
+import productRoutes from "./routes/productRoutes.js";
 // Create an Express application
 const app = express();
 

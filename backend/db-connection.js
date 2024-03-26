@@ -1,5 +1,5 @@
 import { mongoose } from "mongoose";
-import { config } from "dotenv"
+import { config } from "dotenv";
 config();
 const connectionString = process.env.DB_URI;
 
