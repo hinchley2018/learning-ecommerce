@@ -43,8 +43,6 @@
     "prettier-plugin-tailwindcss": "^0.5.12",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint-plugin-tailwindcss": "^3.15.1",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^3.4.1"
   }
 }
