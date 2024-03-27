@@ -1,8 +1,8 @@
 // require the necessary libraries/folders
 
-import {productsNamesList, productsDescriptionsList, productsPricesList, productsQuantitiesList} from "./tempDbData.js";
-
-import {MongoClient} from "mongodb";
+import { Product } from "./models/productModel.js";
+import { productsNamesList, productsDescriptionsList, productsPricesList, productsQuantitiesList } from "./tempDbData.js";
+import { MongoClient } from "mongodb";
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -18,7 +18,7 @@ async function seedDB() {
         await client.connect();
         console.log("Connected correctly to server");
 
-        const collection = client.db("learning-ecommerce").collection("products");
+        const collection = client.db("learning_ecommerce").collection("products");
 
         // The drop() command destroys all data from a collection.
         collection.drop();
@@ -32,12 +32,12 @@ async function seedDB() {
             const productPrice = productsPricesList[randomIntFromInterval(0, 19)];
             const productQuantity = productsQuantitiesList[randomIntFromInterval(0, 19)];
 
-            let product = {
-                productName,
-                productDescription,
-                productPrice,
-                productQuantity
-            };
+            let product = new Product({
+                name: productName,
+                description: productDescription,
+                price: productPrice,
+                product: productQuantity
+            })
             tempProducts.push(product);
         }
         await collection.insertMany(tempProducts);
