@@ -4,7 +4,7 @@ import { Order } from '../models/orderModel.js';
 
 /**
  * @swagger
- * /order:
+ * /orders:
  *   get:
  *     summary: Retrieve all orders from the database
  *     description: Retrieve all orders from the database. Can be used to populate our orders page.
@@ -16,7 +16,7 @@ import { Order } from '../models/orderModel.js';
  *             schema:
  *               type: array
  *               items: 
- *                $ref: '#/components/schemas/Orders'
+ *                $ref: '#/components/schemas/Order'
  */
 
 /**
@@ -29,7 +29,7 @@ import { Order } from '../models/orderModel.js';
  *         Customer:
  *           type: object,
  *           description: Object with customer name, email and address.,
- *           example: {name:"George", email:"george@george.com", address: 111 George St. New York, New York}
+ *           example: {name:"George", email:"george@george.com", address: "111 George St. New York, New York"}
  *         orderDate:
  *           type: date,
  *           description: The date the order was create.,
@@ -41,7 +41,7 @@ import { Order } from '../models/orderModel.js';
  *         Products:
  *           type: array,
  *           description: Array of product objects that include the productName and productAmount.,
- *           example: 50
+ *           example: []
  */
 //Define route to get all orders
 router.get('/', async (req, res) => {
