@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 export function Product({ product }) {
   const [quantity, setQuantity] = useState(1);
 
+  const buttonStyle = {
+    borderRadius: '10px',
+  };
+
   const handleChange = (e) => {
     setQuantity(parseInt(e.target.value)); // Convert input value to integer
   };
@@ -34,7 +38,9 @@ export function Product({ product }) {
         onChange={handleChange}
         min='1'
         max={product.stock} // Set maximum quantity to available stock
-      />
+       />
+       <br></br>
+       <p className="inline-block mt-1 px-6 py-3 text-lg font-semibold bg-blue-500 fas fa-cart-plus text-yellow-400 rounded-x1 hover:bg-blue-700" style={buttonStyle}><button>Add to Cart</button></p>
     </div>
   );
 }
