@@ -18,7 +18,7 @@ export default function ProductsPage() {
       <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
         These are the product(s) available!
       </div>
-      <div className='rounded-b-xl bg-white p-6' data-testid='products'>
+      <div className='rounded-b-xl p-6' data-testid='products'>
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
