@@ -15,24 +15,24 @@ export default function Cart({ product, quantity }) {
           <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
             This is your cart!
           </div>
-            {Array.isArray(cart) && cart.map((item, index) => (
-            <div key={item.id}>
-              <b>Product #: {item.id}</b>
+            {Array.isArray(cart) && cart.map((product, index) => (
+            <div key={product.id}>
+              <b>Product #: {product.id}</b>
               <p>
-                <b>Name: {item.name}</b>
+                <b>Name: {product.name}</b>
               </p>
               <img
-                src={item.imageUrl}
-                alt={item.description}
+                src={product.imageUrl}
+                alt={product.description}
                 style={{
                   maxWidth: '100%',
                   maxHeight: '150px',
                   borderRadius: '10px',
                 }}
               />
-              <p>{item.description}</p>
+              <p>{product.description}</p>
               <b>
-                Price: ${item.price.toFixed(2)}
+                Price: ${product.price.toFixed(2)}
                 <br></br>
               </b>
               <b>Order quantity: </b>
