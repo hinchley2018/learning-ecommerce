@@ -6,15 +6,19 @@ export function Product({ product, addToCart}) {
     borderRadius: '10px',
   };
 
+  /*
   const handleAddToCart = () => {
-    // Create a cart item object with the product and quantity
     const cartItem = {
-      product: product,
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      imageUrl: product.imageUrl,
+      price: product.price,
       quantity: quantity
     };
-    // Call the addToCart function passed as a prop
     addToCart(cartItem);
   };
+  */
 
   const handleChange = (e) => {
     setQuantity(parseInt(e.target.value)); // Convert input value to integer
@@ -50,7 +54,8 @@ export function Product({ product, addToCart}) {
         max={product.stock} // Set maximum quantity to available stock
        />
        <br></br>
-       <p className="inline-block mt-1 px-6 py-3 text-lg font-semibold bg-blue-500 fas fa-cart-plus text-yellow-400 rounded-x1 hover:bg-blue-700" style={buttonStyle}><button onClick={handleAddToCart}>Add to Cart</button></p>
+       <p className="inline-block mt-1 px-6 py-3 text-lg font-semibold bg-blue-500 fas fa-cart-plus text-yellow-400 rounded-x1 hover:bg-blue-700" style={buttonStyle}><button>Add to Cart</button></p>
+       <p className ="text-red-600"><b>Button not working yet</b></p>
     </div>
   );
 }
