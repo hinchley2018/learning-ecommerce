@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
-export function Product({ product }) {
+export function Product({ product, addToCart}) {
   const [quantity, setQuantity] = useState(1);
 
   const buttonStyle = {
     borderRadius: '10px',
+  };
+
+  const handleAddToCart = () => {
+    // Create a cart item object with the product and quantity
+    const cartItem = {
+      product: product,
+      quantity: quantity
+    };
+    // Call the addToCart function passed as a prop
+    addToCart(cartItem);
   };
 
   const handleChange = (e) => {
@@ -40,7 +50,7 @@ export function Product({ product }) {
         max={product.stock} // Set maximum quantity to available stock
        />
        <br></br>
-       <p className="inline-block mt-1 px-6 py-3 text-lg font-semibold bg-blue-500 fas fa-cart-plus text-yellow-400 rounded-x1 hover:bg-blue-700" style={buttonStyle}><button>Add to Cart</button></p>
+       <p className="inline-block mt-1 px-6 py-3 text-lg font-semibold bg-blue-500 fas fa-cart-plus text-yellow-400 rounded-x1 hover:bg-blue-700" style={buttonStyle}><button onClick={handleAddToCart}>Add to Cart</button></p>
     </div>
   );
 }
