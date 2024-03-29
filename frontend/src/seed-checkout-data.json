@@ -1,0 +1,32 @@
+    {
+      "OrderID": "1",
+      "Customer": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "address": "123 Main St, Anytown, USA"
+      },
+      "OrderDate": "2024-03-23T08:00:00Z",
+      "PaymentAmount": 35.95,
+      "Products": [
+        {
+          "ProductName": "Pizza",
+          "ProductAmount": 10.99
+        },
+        {
+          "ProductName": "Soda",
+          "ProductAmount": 1.99
+        },
+        {
+          "ProductName": "Burger",
+          "ProductAmount": 12.99
+        },
+        {
+          "ProductName": "Fries",
+          "ProductAmount": 3.99
+        },
+        {
+          "ProductName": "Shake",
+          "ProductAmount": 5.99
+        }
+      ]
+    }

@@ -1,4 +1,10 @@
+import React, { useState } from 'react';
+import Delivery from "../../components/Delivery";
+import Order from "../../seed-checkout-data.json"
+
 export default function Checkout() {
+    const [order, setOrder] = useState(Order)
+    console.log(order)
     return (
       <div data-testid='checkout'>
         <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
@@ -8,6 +14,7 @@ export default function Checkout() {
         <div id="detail-container" className="flex flex-col" >
           <div id="delivery">
             Delivery Details
+            <Delivery customer={Order.Customer}/>
           </div>
           <div id="product-summary">
             Product Summary
