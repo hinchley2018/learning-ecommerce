@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Delivery from "../../components/Delivery";
 import Order from "../../seed-checkout-data.json"
 import OrderSummary from '../../components/OrderSummary';
@@ -6,6 +7,11 @@ import ProductSummary from '../../components/ProductSummary';
 
 export default function Checkout() {
     const [order, setOrder] = useState(Order)
+    const navigate = useNavigate()
+
+    const handleCheckout = () => {
+        navigate('/confirmation')
+    }
     return (
         <div data-testid='checkout'>
             <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
@@ -43,6 +49,7 @@ export default function Checkout() {
                         />
                     </div>
                     <button className="col-span-1"
+                        onClick={() => handleCheckout()}
                         style={{ backgroundColor: "rgb(30 64 175)", color: "white", margin: ".5rem", borderRadius: '.5rem' }}
                     >
                         Checkout
