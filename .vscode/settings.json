@@ -11,5 +11,8 @@
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "prettier.trailingComma": "es5",
-  "prettier.arrowParens": "always"
+  "prettier.arrowParens": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
