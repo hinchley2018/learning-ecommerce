@@ -6,27 +6,37 @@
         "address": "123 Main St, Anytown, USA"
       },
       "OrderDate": "2024-03-23T08:00:00Z",
-      "PaymentAmount": 35.95,
+      "paymentAmount": "94.85",
       "Products": [
         {
           "ProductName": "Pizza",
-          "ProductAmount": 10.99
+          "ProductAmount": 10.99,
+          "Quantity": 2,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
           "ProductName": "Soda",
-          "ProductAmount": 1.99
+          "ProductAmount": 1.99,
+          "Quantity": 5,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
           "ProductName": "Burger",
-          "ProductAmount": 12.99
+          "ProductAmount": 12.99,
+          "Quantity": 3,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
           "ProductName": "Fries",
-          "ProductAmount": 3.99
+          "ProductAmount": 3.99,
+          "Quantity": 3,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
           "ProductName": "Shake",
-          "ProductAmount": 5.99
+          "ProductAmount": 5.99,
+          "Quantity": 2,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         }
       ]
     }

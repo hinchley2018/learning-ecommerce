@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Delivery from "../../components/Delivery";
 import Order from "../../seed-checkout-data.json"
+import ProductSummary from '../../components/ProductSummary';
 
 export default function Checkout() {
     const [order, setOrder] = useState(Order)
@@ -18,6 +19,11 @@ export default function Checkout() {
           </div>
           <div id="product-summary">
             Product Summary
+            {order.Products.map((product) => (
+                <ProductSummary 
+                    product={product}
+                />
+            ))}
           </div>
           <div id="payment">
             Payment Details

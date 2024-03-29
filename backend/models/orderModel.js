@@ -12,7 +12,9 @@ const orderSchema = new Schema({
   Products:[
     {
         productName: String,
-        productAmount: Number
+        productAmount: Number,
+        quantity: Number,
+        imageUrl: String
     }   
   ],
 })
