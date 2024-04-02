@@ -1,11 +1,19 @@
 //grab config from .env or env vars
-import { config } from "dotenv";
+import { config } from 'dotenv';
+
 config();
 
 // Import dependencies
 import express from 'express';
-import { connectToDatabase } from "./db-connection.js";
-import productRoutes from "./routes/productRoutes.js";
+
+
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './swagger.js';
+import { connectToDatabase } from './db-connection.js';
+import productRoutes from './routes/productRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
+
 // Create an Express application
 const app = express();
 
@@ -21,18 +29,16 @@ app.use(express.urlencoded({ extended: true }));
 
 await connectToDatabase();
 
-// Define a route
-app.get('/', (req, res) => {
-  res.send('Hello, World! This is the API App');
-});
-
+// Define routes
 // Define products route
 app.use('/products', productRoutes);
+//Define orders route
+app.use('/orders', orderRoutes)
+// Define Swagger Documentation route
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Start the server
 app.listen(process.env.PORT, () => {
-  console.log(
-    `Server is running on http://localhost:${process.env.PORT}`
-  );
+  console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
-
