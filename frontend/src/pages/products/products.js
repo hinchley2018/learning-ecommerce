@@ -1,8 +1,5 @@
 import { Product } from '../../components/Product';
 export default function ProductsPage() {
-  <div className='bg-blue-800 p-5 text-xl text-yellow-400'>
-    This is your cart!
-  </div>;
 
   const products = [
     {
@@ -19,9 +16,9 @@ export default function ProductsPage() {
   return (
     <div data-testid='products-page'>
       <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
-        These are your product(s)!
+        These are the product(s) available!
       </div>
-      <div className='rounded-b-xl bg-white p-6' data-testid='products'>
+      <div className='rounded-b-xl p-6' data-testid='products'>
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
