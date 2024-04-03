@@ -1,0 +1,42 @@
+    {
+      "OrderID": "1",
+      "Customer": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "address": "123 Main St, Anytown, USA"
+      },
+      "orderDate": "2024-03-23T08:00:00Z",
+      "paymentAmount": "94.85",
+      "Products": [
+        {
+          "productName": "Pizza",
+          "productAmount": 10.99,
+          "quantity": 2,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "productName": "Soda",
+          "productAmount": 1.99,
+          "quantity": 5,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "productName": "Burger",
+          "productAmount": 12.99,
+          "quantity": 3,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "productName": "Fries",
+          "productAmount": 3.99,
+          "quantity": 3,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "productName": "Shake",
+          "productAmount": 5.99,
+          "quantity": 2,
+          "imageUrl":"https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+      ]
+    }
