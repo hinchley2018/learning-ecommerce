@@ -9,7 +9,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\"",
     "prettier": "npx prettier --write --ignore-path .prettierignore '**/**/*.js'",
-    "seed-db": "node db.js"
+    "seed-db": "node dbSeed.js"
   },
   "author": "",
   "license": "ISC",
