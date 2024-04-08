@@ -4,7 +4,7 @@ export default function ProductsPage() {
   const products = [
     {
       id: 1,
-      name: 'Coffee cup',
+      name: 'Coffee Cup',
       imageUrl:
         'https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       description: 'A cup fit for a software engineer.',

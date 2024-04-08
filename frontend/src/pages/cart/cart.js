@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, { useState } from 'react';
 
 export default function Cart({ product, quantity }) {
@@ -46,3 +47,16 @@ export default function Cart({ product, quantity }) {
         </div>
       );
     }
+=======
+export default function Cart() {
+  return (
+    <div data-testid='cart'>
+      <div className='bg-blue-800 p-5 text-xl text-yellow-400 '>
+        This is your cart!
+      </div>
+      <h1>{cart.product.name}</h1>
+      <p>{cart.product.price}</p>
+    </div>
+  );
+}
+>>>>>>> Stashed changes

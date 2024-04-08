@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, { useState } from 'react';
 <<<<<<< Updated upstream
 export function Product({ product, addToCart}) {
@@ -10,6 +11,9 @@ function ProductsPage() {
     setCart([...cart, productId]);
   };
 }
+=======
+import React, { useContext, useState } from 'react';
+>>>>>>> Stashed changes
 
 export function Product({ product }) {
 >>>>>>> Stashed changes
@@ -35,6 +39,12 @@ export function Product({ product }) {
 
   const handleChange = (e) => {
     setQuantity(parseInt(e.target.value)); // Convert input value to integer
+  };
+
+  const { cart, setCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    setCart(prevCart => [...prevCart, product]);
   };
 
   return (
@@ -72,6 +82,7 @@ export function Product({ product }) {
        <p className ="text-red-600"><b>Button not working yet</b></p>
 =======
       />
+<<<<<<< Updated upstream
       <br></br>
       <button className='bg-blue-600 hover:bg-blue-800 rounded-xl p-5 text-yellow-400'>Add to Cart</button>
 >>>>>>> Stashed changes
@@ -80,3 +91,9 @@ export function Product({ product }) {
 }
 
 export default ProductsPage;
+=======
+      <button onClick={handleAddToCart}>Add to Cart</button>
+    </div>
+  );
+}
+>>>>>>> Stashed changes
