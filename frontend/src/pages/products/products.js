@@ -1,6 +1,5 @@
 import { Product } from '../../components/Product';
 export default function ProductsPage() {
-
   const products = [
     {
       id: 1,

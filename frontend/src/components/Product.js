@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import Cart from '../pages/cart/cart';
 export function Product({ product }) {
   const [quantity, setQuantity] = useState(1);
 
-  const buttonStyle = {
-    borderRadius: '10px',
+  const addToCart = ({ product }) => {
+    const { id, imageUrl, description, stock, price, name } = Cart;
   };
 
   /*
@@ -54,12 +56,25 @@ export function Product({ product }) {
         max={product.stock} // Set maximum quantity to available stock
       />
       <br></br>
-      <p
-        className='fas fa-cart-plus rounded-x1 mt-1 inline-block bg-blue-500 px-6 py-3 text-lg font-semibold text-yellow-400 hover:bg-blue-700'
-        style={buttonStyle}
-      >
-        <button>Add to Cart</button>
-      </p>
+      <div class='my-2'>
+        <NavLink
+          to='/cart'
+          onClick={() =>
+            addToCart()(
+              product.name,
+              product.id,
+              product.description,
+              product.imageUrl,
+              product.price,
+              product.quantity,
+            )
+          }
+        >
+          <button className='rounded-xl bg-blue-600 p-5 text-xl text-yellow-400 hover:bg-blue-800'>
+            Add to Cart
+          </button>
+        </NavLink>
+      </div>
       <p className='text-red-600'>
         <b>Button not working yet</b>
       </p>
